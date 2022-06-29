@@ -1,6 +1,7 @@
 * {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 body{
@@ -20,6 +21,8 @@ body{
     font-size: 30px;
     display: inline-block;
     margin-top: 5px;
+    text-decoration: none;
+    color: black;
 }
 
 .list-navbar{
@@ -235,4 +238,26 @@ body{
 .history{
     background-color: white;
     height: 400px;
+}
+
+.title-h{
+    height: 100px;
+    background-color: #0a1a2a;
+}
+
+.text-t-h{
+    color: white;
+    font-family: 'Caveat', cursive;
+    font-size: 40px;
+    padding-top: 22px;
+    padding-left: 560px;
+}
+
+.container-history{
+    height: 400px;
+    background-color: white;
+}
+
+.space-th-b{
+    height: 20px;
 }
