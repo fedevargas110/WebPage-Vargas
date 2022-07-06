@@ -1,0 +1,239 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+.navbar{
+    background-color: white;
+    height: 65px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    display: flex;
+}
+
+.logo-page{
+    margin-left: 20px;
+    font-size: 30px;
+    display: inline-block;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+.logo{
+    height: 40px;
+}
+
+.list-navbar{
+   margin-left: 320px;
+   display: inline-block;
+   justify-content: center;
+   margin-top: 20px;
+}
+
+.item{
+    display: inline-flex;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.item-ref{
+    text-decoration: none;
+    color: black;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 16px;
+    line-height: 2rem;
+    border-radius: 1.5px;
+}
+
+.item-ref:hover{
+    background-color: #0a1a2a;
+    color: white;
+    transition: .2s;
+}
+
+.space-nav-b{
+    height: 40px;
+}
+
+.container{
+    height: 400px;
+    min-width: 300px;
+}
+
+.wp-part-1{
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    background-color: white;
+}
+
+.title-p1{
+    margin-left: 14rem;
+    padding-top: 110px;
+    font-family: 'Caveat', cursive;
+    font-size: 40px;
+}
+
+.space-text-p1{
+    height: 40px;
+}
+
+.text-p1{
+    margin-left: 5.5rem;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+}
+
+.img-P1{
+    height: 100%;
+    width: 50%;
+    background-image: url(photos/Parte1/personas_sonriendo.jpg);
+    background-position: center;
+    background-size: cover;
+    float: right;
+}
+
+.space-p1-p2{
+    height: 40px;
+}
+
+.img-P2{
+    height: 100%;
+    width: 50%;
+    background-image: url(photos/productos/naranjas.jpg);
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+}
+
+.wp-part-2{
+    width: 50%;
+    height: 100%;
+    float: right;
+    background-color: white;
+}
+
+.title-p2{
+    margin-left: 16rem;
+    padding-top: 110px;
+    font-family: 'Caveat', cursive;
+    font-size: 40px;
+}
+
+.space-text-p2{
+    height: 40px;
+}
+
+.text-p2{
+    margin-left: 5.5rem;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+}
+
+.space-text-btn{
+    height: 55px;
+}
+
+.space-p2-p3{
+    height: 40px;
+}
+
+.btn{
+    margin-left: 17rem;
+    text-decoration: none;
+    color: black;
+    border-style: solid;
+    border-width: thin;
+    padding: 16px 36px 13px;
+    border-radius: 50px;
+    font-family: 'Radio Canada', sans-serif;
+    font-weight: bold;
+}
+
+.btn:hover{
+    background: blueviolet;
+    color: white;
+    transition: .2s;
+}
+
+.pie-pagina{
+    background-color: white;
+    width: 100%;
+}
+
+.group-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.box-1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img-logo-footer{
+    width: 250px;
+}
+
+.box-2 h3{
+    margin-bottom: 25px;
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
+}
+
+.box-2 p{
+    margin-bottom: 10px;
+    font-family: 'Radio Canada', sans-serif;
+}
+
+.box-3 h3{
+    margin-bottom: 25px;
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
+}
+
+.box-3 p{
+    margin-bottom: 10px;
+    font-family: 'Radio Canada', sans-serif;
+}
+
+.box-4 h3{
+    margin-bottom: 25px;
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
+}
+
+.red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: black;
+}
+
+.red-social a:hover{
+    color: blue;
+    transition: .2s;
+}
+
+.group-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+    font-family: 'Radio Canada', sans-serif;    
+}
