@@ -8,21 +8,18 @@
 
 }
 
-html {
+* {
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
-    font-size: 62.5%;
-  }
-
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+}
 
 body{
-    background-color: var(--color-terciario);
+    background-color: whitesmoke;
 }
 
 .navbar{
-    background-color: var(--color-secundario);
+    background-color: white;
     height: 65px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     display: flex;
@@ -41,8 +38,9 @@ body{
 }
 
 .list-navbar{
-   margin-left: auto;
-   margin-right: 45rem;
+   margin-left: 320px;
+   display: inline-block;
+   justify-content: center;
    margin-top: 20px;
 }
 
@@ -54,8 +52,8 @@ body{
 
 .item-ref{
     text-decoration: none;
-    color: var(--negro);
-    font-family: var(--font-secundaria);
+    color: black;
+    font-family: 'Radio Canada', sans-serif;
     font-size: 16px;
     line-height: 2rem;
     border-radius: 1.5px;
@@ -67,45 +65,88 @@ body{
     transition: .2s;
 }
 
+.space-nav-b{
+    height: 40px;
+}
 
-.history{
-    background-color: white;
+.container{
     height: 400px;
+    min-width: 300px;
 }
 
-.title-h{
-    height: 100px;
-    background-color: #0a1a2a;
+.wp-part-1{
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    background-color: white;
 }
 
-.text-t-h{
-    color: white;
+.title-p1{
+    margin-left: 14rem;
+    padding-top: 110px;
     font-family: 'Caveat', cursive;
     font-size: 40px;
-    padding-top: 22px;
-    padding-left: 560px;
-}
-.text-h{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    font-family: var(--font-secundaria);
-    font-size: 2rem;
 }
 
-.container-history{
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    height: 400px;
+.space-text-p1{
+    height: 40px;
+}
+
+.text-p1{
+    margin-left: 5.5rem;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+}
+
+.img-P1{
+    height: 100%;
+    width: 50%;
+    background-image: url(../photos/Parte1/personas_sonriendo.jpg);
+    background-position: center;
+    background-size: cover;
+    float: right;
+}
+
+.space-p1-p2{
+    height: 40px;
+}
+
+.img-P2{
+    height: 100%;
+    width: 50%;
+    background-image: url(../photos/productos/naranjas.jpg);
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+}
+
+.wp-part-2{
+    width: 50%;
+    height: 100%;
+    float: right;
     background-color: white;
 }
 
-.space-th-b{
-    height: 20px;
+.title-p2{
+    margin-left: 16rem;
+    padding-top: 110px;
+    font-family: 'Caveat', cursive;
+    font-size: 40px;
 }
 
-/*FOOTER*/
+.space-text-p2{
+    height: 40px;
+}
+
+.text-p2{
+    margin-left: 5.5rem;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+}
+
+.space-text-btn{
+    height: 55px;
+}
 
 .space-p2-p3{
     height: 40px;
@@ -166,7 +207,6 @@ body{
 .box-2 p{
     margin-bottom: 10px;
     font-family: 'Radio Canada', sans-serif;
-    font-size: 1.4rem;
 }
 
 .box-3 h3{
@@ -178,7 +218,6 @@ body{
 .box-3 p{
     margin-bottom: 10px;
     font-family: 'Radio Canada', sans-serif;
-    font-size: 1.4rem;
 }
 
 .box-4 h3{
@@ -194,7 +233,6 @@ body{
     height: 45px;
     line-height: 45px;
     color: black;
-    font-size: 1.4rem;
 }
 
 .red-social a:hover{
