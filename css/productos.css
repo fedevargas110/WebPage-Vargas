@@ -1,0 +1,57 @@
+:root{
+    --color-principal: #0a1a2a;
+    --blanco: #ffffff;
+    --blacno-claro: whitesmoke;
+    --negro: #000;
+    --font-primaria: 'Caveat', cursive;
+    --font-secundaria: 'Radio Canada', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*Globales*/
+
+body{
+    background-color: var(--blacno-claro);
+}
+
+.header{
+    height: 90px;
+    background-color: var(--blanco);
+    display: flex;
+    align-items: center;
+    box-shadow:  0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    margin: 0 0 0 33rem;
+}
+
+.navegacion__item{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--negro);
+    font-family: var(--font-secundaria);
+    text-transform: uppercase;
+    padding: .7rem 0;
+}
+
+.img{
+    height: 9rem;
+}
+
+.navegacion__item:hover{
+    color: var(--blanco);
+    background-color: var(--color-principal);
+    border-radius: .3rem;
+}
