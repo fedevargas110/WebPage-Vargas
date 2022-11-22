@@ -55,3 +55,19 @@ body{
     background-color: var(--color-principal);
     border-radius: .3rem;
 }
+
+/*Section Productos*/
+
+.productos{
+    text-align: center;
+    background-color: var(--blanco);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    height: 50rem;
+}
+
+h3{
+    font-size: 4rem;
+    padding-top: 2rem;
+    font-family: var(--font-primaria);
+    border-bottom: 1px solid var(--blacno-claro);
+}
