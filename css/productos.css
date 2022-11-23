@@ -69,7 +69,7 @@ body{
     height: 50rem;
 }
 
-h3{
+.titulo-fotos{
     font-size: 4rem;
     padding-top: 2rem;
     font-family: var(--font-primaria);
