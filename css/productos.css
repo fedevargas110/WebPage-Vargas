@@ -50,6 +50,10 @@ body{
     height: 9rem;
 }
 
+.img:hover{
+    cursor: pointer;
+}
+
 .navegacion__item:hover{
     color: var(--blanco);
     background-color: var(--color-principal);
