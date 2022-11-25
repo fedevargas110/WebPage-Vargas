@@ -1,4 +1,4 @@
-:root{
+:root {
     --color-principal: #0a1a2a;
     --blanco: #ffffff;
     --blacno-claro: whitesmoke;
@@ -12,32 +12,35 @@ html {
     font-size: 62.5%;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
 /*Globales*/
 
-body{
+body {
     background-color: var(--blacno-claro);
 }
 
-.header{
+.header {
     height: 90px;
     background-color: var(--blanco);
     display: flex;
     align-items: center;
-    box-shadow:  0 1px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-.navegacion{
+/*Nav*/
+.navegacion {
     display: flex;
     justify-content: space-between;
     gap: 3rem;
     margin: 0 0 0 33rem;
 }
 
-.navegacion__item{
+.navegacion__item {
     font-size: 1.6rem;
     text-decoration: none;
     color: var(--negro);
@@ -46,15 +49,15 @@ body{
     padding: .7rem 0;
 }
 
-.img{
+.img {
     height: 9rem;
 }
 
-.img:hover{
+.img:hover {
     cursor: pointer;
 }
 
-.navegacion__item:hover{
+.navegacion__item:hover {
     color: var(--blanco);
     background-color: var(--color-principal);
     border-radius: .3rem;
@@ -62,30 +65,56 @@ body{
 
 /*Section Productos*/
 
-.productos{
+.productos {
     text-align: center;
-    background-color: var(--blanco);
+    background-color: var(--blacno-claro);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    height: 50rem;
+    height: 120rem;
 }
 
-.titulo-fotos{
+.titulo-fotos {
     font-size: 4rem;
     padding-top: 2rem;
     font-family: var(--font-primaria);
     border-bottom: 1px solid var(--blacno-claro);
 }
 
-.space-p2-p3{
+.producto__imagen{
+    width: 300px;
+    height: 300px;
+}
+
+.producto__enlace{
+    text-decoration: none;
+    color: var(--negro);
+    font-size: 2rem;
+    font-family: var(--font-primaria);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.producto__nombre{
+    margin: 10px 0;
+}
+
+.producto__imagen{
+    border-radius: 10%;
+}
+
+/*Footer*/
+.space-p2-p3 {
     height: 40px;
 }
 
-.pie-pagina{
+.pie-pagina {
     background-color: white;
     width: 100%;
 }
 
-.group-1{
+.group-1 {
     width: 100%;
     max-width: 1200px;
     margin: auto;
@@ -95,7 +124,7 @@ body{
     padding: 45px 0px;
 }
 
-.box-1{
+.box-1 {
     width: 100%;
     height: 100%;
     display: flex;
@@ -104,41 +133,41 @@ body{
 
 }
 
-.img-logo-footer{
+.img-logo-footer {
     width: 250px;
 }
 
-.box-2 h3{
+.box-2 h3 {
     margin-bottom: 25px;
     font-family: 'Caveat', cursive;
     font-size: 25px;
 }
 
-.box-2 p{
+.box-2 p {
     margin-bottom: 10px;
     font-family: 'Radio Canada', sans-serif;
     font-size: 16px;
 }
 
-.box-3 h3{
+.box-3 h3 {
     margin-bottom: 25px;
     font-family: 'Caveat', cursive;
     font-size: 25px;
 }
 
-.box-3 p{
+.box-3 p {
     margin-bottom: 10px;
     font-family: 'Radio Canada', sans-serif;
     font-size: 16px;
 }
 
-.box-4 h3{
+.box-4 h3 {
     margin-bottom: 25px;
     font-family: 'Caveat', cursive;
     font-size: 25px;
 }
 
-.red-social a{
+.red-social a {
     display: inline-block;
     text-decoration: none;
     width: 45px;
@@ -148,19 +177,19 @@ body{
     font-size: 16px;
 }
 
-.red-social a:hover{
+.red-social a:hover {
     color: blue;
     transition: .2s;
 }
 
-.group-2{
+.group-2 {
     background-color: #0a1a2a;
     padding: 15px 10px;
     text-align: center;
     color: white;
-    font-family: 'Radio Canada', sans-serif;   
+    font-family: 'Radio Canada', sans-serif;
 }
 
-.p-group-2{
+.p-group-2 {
     font-size: 12.8px;
 }
