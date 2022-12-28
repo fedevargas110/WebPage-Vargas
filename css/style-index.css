@@ -18,52 +18,60 @@ body{
     background-color: whitesmoke;
 }
 
-.navbar{
-    background-color: white;
-    height: 65px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    display: flex;
+@media (min-width:480px) {
+    
 }
 
-.logo-page{
-    margin-left: 20px;
-    font-size: 30px;
-    display: inline-block;
-    margin-top: 5px;
-    padding-top: 5px;
+@media (min-width:768px) {
+    .navbar{
+        background-color: white;
+        height: auto;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+        display: flex;
+    }
+
+    .logo-page{
+        margin-left: 20px;
+        font-size: 30px;
+        display: inline-block;
+        margin-top: 5px;
+        padding-top: 5px;
+    }
+
+    .logo{
+        height: 40px;
+    }
+    
+    .list-navbar{
+       margin-left: 320px;
+       display: inline-block;
+       justify-content: center;
+       margin-top: 20px;
+    }
+    
+    .item{
+        display: inline-flex;
+        padding-left: 20px;
+        font-size: 16px;
+    }
+    
+    .item-ref{
+        text-decoration: none;
+        color: black;
+        font-family: 'Radio Canada', sans-serif;
+        font-size: 16px;
+        line-height: 2rem;
+        border-radius: 1.5px;
+    }
+    
+    .item-ref:hover{
+        background-color: #0a1a2a;
+        color: white;
+        transition: .2s;
+    }
 }
 
-.logo{
-    height: 40px;
-}
 
-.list-navbar{
-   margin-left: 320px;
-   display: inline-block;
-   justify-content: center;
-   margin-top: 20px;
-}
-
-.item{
-    display: inline-flex;
-    padding-left: 20px;
-    font-size: 16px;
-}
-
-.item-ref{
-    text-decoration: none;
-    color: black;
-    font-family: 'Radio Canada', sans-serif;
-    font-size: 16px;
-    line-height: 2rem;
-    border-radius: 1.5px;
-}
-
-.item-ref:hover{
-    background-color: #0a1a2a;
-    color: white;
-    transition: .2s;
-}
 
 .space-nav-b{
     height: 40px;
