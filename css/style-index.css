@@ -21,12 +21,34 @@ body{
 .navbar{
     display: block;
     background-color: white;
-    
+}
+.puto{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 1rem;
 }
 
 .logo{
     height: 5rem;
-    justify-content: center;
+}
+
+.list-navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+.item-ref{
+    text-decoration: none;
+    color: var(--negro);
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 20px;
+}
+
+.item{
+    padding: .4rem 0;
 }
 
 
@@ -34,43 +56,46 @@ body{
 @media (min-width:768px) {
     .navbar{
         background-color: white;
-        height: auto;
+        height: 60px;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
         display: flex;
     }
 
+    .puto{
+        flex-basis: 10%;
+        display: flex;
+        justify-content: left;
+        padding: 0;
+    }
+
     .logo-page{
-        margin-left: 20px;
         font-size: 30px;
-        display: inline-block;
-        margin-top: 5px;
-        padding-top: 5px;
+        display: flex;
+        align-items: center;
     }
 
     .logo{
         height: 40px;
+        margin-left: 1rem;
     }
     
     .list-navbar{
-       margin-left: 320px;
-       display: inline-block;
+       display: flex;
+       flex-direction: row;
        justify-content: center;
-       margin-top: 20px;
+       align-items: center;
+       flex-basis: 90%;
     }
     
     .item{
-        display: inline-flex;
-        padding-left: 20px;
         font-size: 16px;
     }
     
     .item-ref{
-        text-decoration: none;
-        color: black;
-        font-family: 'Radio Canada', sans-serif;
         font-size: 16px;
         line-height: 2rem;
-        border-radius: 1.5px;
+        border-radius: 1.8px;
+        padding: .5em .7em;
     }
     
     .item-ref:hover{
