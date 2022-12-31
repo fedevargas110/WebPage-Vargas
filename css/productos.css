@@ -24,163 +24,204 @@ body {
     background-color: var(--blacno-claro);
 }
 
-.header {
-    height: 90px;
-    background-color: var(--blanco);
+/*--------HEADER AND NAVBAR-------------*/
+
+.header{
+    width: 100%;
+    background-color: white;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-/*Nav*/
-.navegacion {
+.img{
+    height: 8rem;
+}
+
+.navegacion{
+    padding-top: 1.9rem;
+    padding-bottom: .4rem;
     display: flex;
-    justify-content: space-between;
-    gap: 3rem;
-    margin: 0 0 0 33rem;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
 }
 
-.navegacion__item {
-    font-size: 1.6rem;
+.navegacion__item{
+    padding: .5rem 0;
     text-decoration: none;
     color: var(--negro);
     font-family: var(--font-secundaria);
-    text-transform: uppercase;
-    padding: .7rem 0;
+    font-size: 20px;
 }
 
-.img {
-    height: 9rem;
+/*-------------BODY--------------*/
+
+@media (min-width:768px) {
+    .header {
+        background-color: var(--blanco);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: row;
+    }
+
+    .img{
+        height: 4.5rem;
+        margin-left: 2rem;
+        flex-basis: 10%;
+        padding-top: .5rem;
+    }
+    
+    /*Nav*/
+    .navegacion {
+        gap: 3rem;
+        justify-content: center;
+        flex-direction: row;
+        flex-basis: 90%;
+        padding-bottom: 1rem;
+        margin-left: 5rem;
+    }
+    
+    .navegacion__item {
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: var(--negro);
+        font-family: var(--font-secundaria);
+        text-transform: uppercase;
+        padding: .8rem 1rem;
+    }
+    
+    .img:hover {
+        cursor: pointer;
+    }
+    
+    .navegacion__item:hover {
+        color: var(--blanco);
+        background-color: var(--color-principal);
+        border-radius: .3rem;
+    }
+    
+    /*Section Productos*/
+    
+    .productos {
+        text-align: center;
+        background-color: var(--blacno-claro);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+        height: auto;
+    }
+    
+    .titulo-fotos {
+        font-size: 4rem;
+        padding-top: 2rem;
+        font-family: var(--font-primaria);
+        border-bottom: 1px solid var(--blacno-claro);
+    }
+    
+    .producto__imagen{
+        width: 300px;
+        height: 300px;
+    }
+    
+    .producto__enlace{
+        text-decoration: none;
+        color: var(--negro);
+        font-size: 2rem;
+        font-family: var(--font-primaria);
+    }
+    
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .producto__nombre{
+        margin: 10px 0;
+    }
+    
+    .producto__imagen{
+        border-radius: 10%;
+    }
+    
+    /*Footer*/
+    .space-p2-p3 {
+        height: 40px;
+    }
+    
+    .pie-pagina {
+        background-color: white;
+        width: 100%;
+    }
+    
+    .group-1 {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 50px;
+        padding: 45px 0px;
+    }
+    
+    .box-1 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    .img-logo-footer {
+        width: 250px;
+    }
+    
+    .box-2 h3 {
+        margin-bottom: 25px;
+        font-family: 'Caveat', cursive;
+        font-size: 25px;
+    }
+    
+    .box-2 p {
+        margin-bottom: 10px;
+        font-family: 'Radio Canada', sans-serif;
+        font-size: 16px;
+    }
+    
+    .box-3 h3 {
+        margin-bottom: 25px;
+        font-family: 'Caveat', cursive;
+        font-size: 25px;
+    }
+    
+    .box-3 p {
+        margin-bottom: 10px;
+        font-family: 'Radio Canada', sans-serif;
+        font-size: 16px;
+    }
+    
+    .box-4 h3 {
+        margin-bottom: 25px;
+        font-family: 'Caveat', cursive;
+        font-size: 25px;
+    }
+    
+    .red-social a {
+        display: inline-block;
+        text-decoration: none;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        color: black;
+        font-size: 16px;
+    }
+    
+    .red-social a:hover {
+        color: blue;
+        transition: .2s;
+    }
+    
 }
 
-.img:hover {
-    cursor: pointer;
-}
-
-.navegacion__item:hover {
-    color: var(--blanco);
-    background-color: var(--color-principal);
-    border-radius: .3rem;
-}
-
-/*Section Productos*/
-
-.productos {
-    text-align: center;
-    background-color: var(--blacno-claro);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    height: auto;
-}
-
-.titulo-fotos {
-    font-size: 4rem;
-    padding-top: 2rem;
-    font-family: var(--font-primaria);
-    border-bottom: 1px solid var(--blacno-claro);
-}
-
-.producto__imagen{
-    width: 300px;
-    height: 300px;
-}
-
-.producto__enlace{
-    text-decoration: none;
-    color: var(--negro);
-    font-size: 2rem;
-    font-family: var(--font-primaria);
-}
-
-.grid{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.producto__nombre{
-    margin: 10px 0;
-}
-
-.producto__imagen{
-    border-radius: 10%;
-}
-
-/*Footer*/
-.space-p2-p3 {
-    height: 40px;
-}
-
-.pie-pagina {
-    background-color: white;
-    width: 100%;
-}
-
-.group-1 {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 50px;
-    padding: 45px 0px;
-}
-
-.box-1 {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.img-logo-footer {
-    width: 250px;
-}
-
-.box-2 h3 {
-    margin-bottom: 25px;
-    font-family: 'Caveat', cursive;
-    font-size: 25px;
-}
-
-.box-2 p {
-    margin-bottom: 10px;
-    font-family: 'Radio Canada', sans-serif;
-    font-size: 16px;
-}
-
-.box-3 h3 {
-    margin-bottom: 25px;
-    font-family: 'Caveat', cursive;
-    font-size: 25px;
-}
-
-.box-3 p {
-    margin-bottom: 10px;
-    font-family: 'Radio Canada', sans-serif;
-    font-size: 16px;
-}
-
-.box-4 h3 {
-    margin-bottom: 25px;
-    font-family: 'Caveat', cursive;
-    font-size: 25px;
-}
-
-.red-social a {
-    display: inline-block;
-    text-decoration: none;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    color: black;
-    font-size: 16px;
-}
-
-.red-social a:hover {
-    color: blue;
-    transition: .2s;
-}
 
 .group-2 {
     background-color: #0a1a2a;
