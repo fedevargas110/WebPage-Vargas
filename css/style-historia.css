@@ -1,4 +1,4 @@
-:root{
+:root {
     --color-principal: #0a1a2a;
     --color-secundario: #ffffff;
     --color-terciario: whitesmoke;
@@ -11,206 +11,223 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-  }
+}
 
-  *, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
-  }
+}
 
-body{
+body {
     background-color: var(--color-terciario);
 }
 
-.navbar{
-    background-color: var(--color-secundario);
-    height: 65px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+
+.navbar {
+    display: block;
+    background-color: white;
+}
+
+.puto {
     display: flex;
-}
-
-.logo-page{
-    margin-left: 20px;
-    font-size: 30px;
-    display: inline-block;
-    margin-top: 5px;
-    padding-top: 5px;
-}
-
-.logo{
-    height: 40px;
-}
-
-.list-navbar{
-    margin-left: 280px;
-    display: inline-block;
+    width: 100%;
     justify-content: center;
-    margin-top: 25px;
+    padding-bottom: 1rem;
 }
 
-.item{
-    display: inline-flex;
-    padding-left: 20px;
-    font-size: 16px;
+.logo {
+    height: 8rem;
 }
 
-.item-ref{
+.list-navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+}
+
+.item-ref {
+    color: #000;
     text-decoration: none;
-    color: var(--negro);
     font-family: var(--font-secundaria);
-    font-size: 16px;
-    line-height: 2rem;
-    border-radius: 1.5px;
-    padding: .5rem 0;
+    font-size: 20px;
 }
 
-.item-ref:hover{
-    background-color: #0a1a2a;
-    color: white;
-    transition: .2s;
+.item {
+    padding: .4rem 0;
 }
 
-.history{
-    background-color: white;
-    height: 400px;
+/*-------------------BODY-------------------*/
+
+.title-h {
+    background-color: var(--color-principal);
+    width: 100%;
+    padding: 2rem 0;
 }
 
-.title-h{
-    height: 100px;
-    background-color: #0a1a2a;
+.text-t-h {
+    text-align: center;
+    font-family: var(--font-primaria);
+    font-size: 30px;
+    color: var(--color-secundario);
+    margin: 0;
 }
 
-.text-t-h{
-    color: white;
-    font-family: 'Caveat', cursive;
-    font-size: 40px;
-    padding-top: 22px;
-    padding-left: 560px;
+.container-history {
+    background-color: var(--color-secundario);
+    margin: 1rem 0;
+    padding: 2rem 0;
 }
-.text-h{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+.text-h {
     font-family: var(--font-secundaria);
-    font-size: 2rem;
+    font-size: 20px;
+    text-align: center;
 }
 
-.container-history{
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    height: 400px;
-    background-color: white;
-}
+/*-------FOOTER------Mobile*/
 
-.space-th-b{
-    height: 20px;
-}
-
-/*FOOTER*/
-
-.space-p2-p3{
-    height: 40px;
-}
-
-.btn{
-    margin-left: 17rem;
-    text-decoration: none;
-    color: black;
-    border-style: solid;
-    border-width: thin;
-    padding: 16px 36px 13px;
-    border-radius: 50px;
-    font-family: 'Radio Canada', sans-serif;
-    font-weight: bold;
-}
-
-.btn:hover{
-    background: blueviolet;
-    color: white;
-    transition: .2s;
-}
-
-.pie-pagina{
-    background-color: white;
-    width: 100%;
-}
-
-.group-1{
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 50px;
-    padding: 45px 0px;
-}
-
-.box-1{
-    width: 100%;
-    height: 100%;
+.pie-pagina {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-direction: column;
+    background-color: var(--color-secundario);
 }
 
-.img-logo-footer{
-    width: 250px;
+.box-1 {
+    width: 100%;
 }
 
-.box-2 h3{
+.img-logo-footer {
+    width: 25rem;
+    padding: 2rem 0;
+}
+
+.group-1 {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    text-align: center;
+}
+
+.box h3 {
     margin-bottom: 25px;
     font-family: 'Caveat', cursive;
-    font-size: 25px;
+    font-size: 28px;
 }
 
-.box-2 p{
+.box p {
     margin-bottom: 10px;
     font-family: 'Radio Canada', sans-serif;
-    font-size: 16px;
+    font-size: 17px;
 }
 
-.box-3 h3{
-    margin-bottom: 25px;
-    font-family: 'Caveat', cursive;
-    font-size: 25px;
-}
-
-.box-3 p{
-    margin-bottom: 10px;
-    font-family: 'Radio Canada', sans-serif;
-    font-size: 16px;
-}
-
-.box-4 h3{
-    margin-bottom: 25px;
-    font-family: 'Caveat', cursive;
-    font-size: 25px;
-}
-
-.red-social a{
+.red-social a {
     display: inline-block;
     text-decoration: none;
+    color: var(--negro);
     width: 45px;
     height: 45px;
     line-height: 45px;
-    color: black;
     font-size: 16px;
 }
 
-.red-social a:hover{
+.red-social a:hover {
     color: blue;
     transition: .2s;
 }
 
-.group-2{
+.group-2 {
+    width: 100%;
     background-color: #0a1a2a;
     padding: 15px 10px;
     text-align: center;
     color: white;
-    font-family: 'Radio Canada', sans-serif;   
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 17px;
 }
 
-.p-group-2{
-    font-size: 12.8px;
+/*------Web-----*/
+@media (min-width:768px) {
+    .navbar {
+        height: 60px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+        display: flex;
+    }
+
+    .puto {
+        flex-basis: 10%;
+        display: flex;
+        justify-content: left;
+        padding: 0;
+    }
+
+    .logo-page {
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        height: 40px;
+        margin-left: 1rem;
+    }
+
+    .list-navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 90%;
+    }
+
+    .item {
+        font-size: 16px;
+    }
+
+    .item-ref {
+        font-size: 16px;
+        line-height: 2rem;
+        border-radius: 1.8px;
+        padding: .5em .7em;
+    }
+
+    .item-ref:hover {
+        background-color: #0a1a2a;
+        color: white;
+        transition: .2s;
+    }
+/* ------------------------------BODY----------------------------*/
+
+    .title-h {
+        background-color: #0a1a2a;
+        text-align: center;
+    }
+
+    .text-t-h {
+        font-size: 50px;
+    }
+
+    .container-history {
+        width: 100%;
+    }
+
+    /*-------------------FOOTER---------------------*/
+
+    .group-1 {
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: none;
+        padding: 2rem 0;
+        column-gap: 2rem;
+    }
+
+    .box {
+      padding-top: 2rem;
+    }
+
+    .img-logo-footer {
+        width: 250px;
+    }
 }
