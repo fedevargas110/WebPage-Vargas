@@ -2,10 +2,21 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+
+const products = [
+  {
+    id: 1,
+    image: "photos/productos/1.jpg",
+    name: "Tomate Perita"
+  },
+];
+
+app.get('/api/products', (req, res) => {
+  res.send(products);
 })
 
+app.use('/', express.static('Front'));
+
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Servidor UP Successfully in ${port}`)
 })
