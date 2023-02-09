@@ -9,6 +9,11 @@ const products = [
     image: "photos/productos/1.jpg",
     name: "Tomate Perita"
   },
+  {
+    id: 2,
+    image: "photos/productos/2.jpg",
+    name: "Tomate Redondo"
+  }
 ];
 
 app.get('/api/products', (req, res) => {

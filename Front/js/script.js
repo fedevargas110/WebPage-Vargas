@@ -23,18 +23,20 @@ function displayProducts(productList) {
         productsHTML +=
         `<div class="producto">
             <a class="producto__enlace" href="#">
-            <img class="producto__imagen" src="photos/productos/1.jpg" alt="imagen producto">
+            <img class="producto__imagen" src="${e.image}" alt="imagen producto">
             <div class="producto__informacion">
-            <p class="producto__nombre">Tomate Perita</p>
+            <p class="producto__nombre">${e.name}</p>
             <!--<p class="producto__precio">$200</p>-->
           </div>
         </a>
       </div>`
     });
+    document.getElementById('pruebaExpress').innerHTML = productsHTML;
 }
 
 window.onload = async() =>{
     console.log('Pagina cargada');
     const productList = await(await fetch('/api/products')).json();
     console.log(productList);
+    displayProducts(productList);
 };
