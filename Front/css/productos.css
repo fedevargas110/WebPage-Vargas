@@ -64,7 +64,7 @@ body {
 }
 
 .productos {
-    width: 100;
+    width: 100%;
     text-align: center;
 }
 
@@ -86,9 +86,17 @@ body {
 }
 
 .producto__imagen {
-    width: 50rem;
+    width: 200px;
     border-radius: 2rem;
     box-shadow: 0 1px 1.5px rgba(0, 0, 0, 0.3);
+} 
+
+@media (min-width:480px) {
+    .producto__imagen {
+        width: 45rem;
+        border-radius: 2rem;
+        box-shadow: 0 1px 1.5px rgba(0, 0, 0, 0.3);
+    } 
 }
 
 .producto__enlace {
