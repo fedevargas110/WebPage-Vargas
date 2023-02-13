@@ -23,9 +23,9 @@ function displayProducts(productList) {
         productsHTML +=
         `<div class="producto">
             <a class="producto__enlace" href="#">
-            <img class="producto__imagen" src="${e.image}" alt="imagen producto">
+            <img class="producto__imagen" src="${e.img_producto}" alt="imagen producto">
             <div class="producto__informacion">
-            <p class="producto__nombre">${e.name}</p>
+            <p class="producto__nombre">${e.nombre}</p>
             <!--<p class="producto__precio">$200</p>-->
           </div>
         </a>
