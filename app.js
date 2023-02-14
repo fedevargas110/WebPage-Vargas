@@ -1,11 +1,14 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const port = 3000
 const mysql = require('mysql2/promise')
 
+//const whiteList = ['https://drive.google.com/file/d/1pAYYgFQmWrSEEUNMAWHr9nfgVdOYGOkf/view?'];
+
+
+//app.use(cors({origin : whiteList}));
 var connection;
-
-
 
 app.get('/api/products', async(req, res) => {
   const [row, fields] = await connection.execute('SELECT * FROM productos')
@@ -14,6 +17,7 @@ app.get('/api/products', async(req, res) => {
 })
 
 app.use('/', express.static('Front'));
+
 
 app.listen(port, async() => {
   connection = await mysql.createConnection({
