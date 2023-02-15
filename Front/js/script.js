@@ -17,9 +17,10 @@ function scrollNav() {
     });
 }
 
-function mostrarModal(){
+function mostrarModal(nombre){
     console.log('Hola MATEO');
     document.getElementById('modal').style.setProperty('visibility', 'visible');
+    document.getElementById('content-titulo').innerHTML = nombre;
 }
 
 function cerrarModal(){
@@ -33,7 +34,7 @@ function displayProducts(productList) {
         productsHTML +=
         `<div class="producto">
             <a class="producto__enlace">
-            <img class="producto__imagen" src="${e.img_producto}" alt="imagen producto">
+            <img onclick="mostrarModal('${e.nombre}')" class="producto__imagen" src="${e.img_producto}" alt="imagen producto">
             <div class="producto__informacion">
             <p class="producto__nombre">${e.nombre}</p>
             <!--<p class="producto__precio">$200</p>-->

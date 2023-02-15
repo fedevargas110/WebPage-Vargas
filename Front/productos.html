@@ -31,14 +31,14 @@
     <div class="container-titulo">
       <h3 class="titulo-fotos">Nuestros Productos</h3>
     </div>
-    <div onclick="mostrarModal()" id="pruebaExpress" class="grid">
+    <div id="pruebaExpress" class="grid">
       <!-- Aca se cargan los produtos desde express -->
     </div>
     <input type="checkbox" id="btn-modal">
     <div id="modal" class="container-modal">
       <div class="content-modal">
-        <h2 class="content-modal-title">Bienvenido</h2>
-        <p class="content-modal-text">jajajajajajjaa, jajajaj</p>
+        <h2 id="content-titulo" class="content-modal-title"></h2>
+        <p id="content-text" class="content-modal-text"></p>
         <div class="btn-cerrar">
           <label onclick="cerrarModal()" for="btn-modal">Cerrar</label>
         </div>
