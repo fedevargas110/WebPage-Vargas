@@ -17,12 +17,22 @@ function scrollNav() {
     });
 }
 
+function mostrarModal(){
+    console.log('Hola MATEO');
+    document.getElementById('modal').style.setProperty('visibility', 'visible');
+}
+
+function cerrarModal(){
+    console.log('Hola Fede');
+    document.getElementById('modal').style.setProperty('visibility','hidden');
+}
+
 function displayProducts(productList) {
     let productsHTML = '';
     productList.forEach(e => {
         productsHTML +=
         `<div class="producto">
-            <a class="producto__enlace" href="#">
+            <a class="producto__enlace">
             <img class="producto__imagen" src="${e.img_producto}" alt="imagen producto">
             <div class="producto__informacion">
             <p class="producto__nombre">${e.nombre}</p>

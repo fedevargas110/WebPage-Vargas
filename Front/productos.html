@@ -31,7 +31,7 @@
     <div class="container-titulo">
       <h3 class="titulo-fotos">Nuestros Productos</h3>
     </div>
-    <div id="pruebaExpress" class="grid">
+    <div onclick="mostrarModal()" id="pruebaExpress" class="grid">
       <!-- Aca se cargan los produtos desde express -->
     </div>
     <input type="checkbox" id="btn-modal">
@@ -40,10 +40,10 @@
         <h2 class="content-modal-title">Bienvenido</h2>
         <p class="content-modal-text">jajajajajajjaa, jajajaj</p>
         <div class="btn-cerrar">
-          <label for="btn-modal">Cerrar</label>
+          <label onclick="cerrarModal()" for="btn-modal">Cerrar</label>
         </div>
       </div>
-      <label for="btn-modal" class="cerrar-modal"></label>
+      <label onclick="cerrarModal()" for="btn-modal" class="cerrar-modal"></label>
     </div>
   </section>
   <footer id="footer" class="pie-pagina">
