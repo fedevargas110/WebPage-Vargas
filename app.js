@@ -16,6 +16,12 @@ app.get('/api/products', async(req, res) => {
   res.send(row);
 })
 
+app.get('/api/variedades', async(req, res)=>{
+  const [row, fields] = await connection.execute('SELECT * FROM variedades')
+  console.log(row);
+  res.send(row);
+})
+
 app.use('/', express.static('Front'));
 
 

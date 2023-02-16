@@ -20,7 +20,6 @@ function scrollNav() {
 function mostrarModal(nombre){
     console.log('Hola MATEO');
     document.getElementById('modal').style.setProperty('visibility', 'visible');
-    document.getElementById('content-titulo').innerHTML = nombre;
 }
 
 function cerrarModal(){
@@ -34,7 +33,7 @@ function displayProducts(productList) {
         productsHTML +=
         `<div class="producto">
             <a class="producto__enlace">
-            <img onclick="mostrarModal('${e.nombre}')" class="producto__imagen" src="${e.img_producto}" alt="imagen producto">
+            <img onclick="mostrarModal()" class="producto__imagen" src="${e.img_producto}" alt="imagen producto">
             <div class="producto__informacion">
             <p class="producto__nombre">${e.nombre}</p>
             <!--<p class="producto__precio">$200</p>-->
@@ -45,9 +44,29 @@ function displayProducts(productList) {
     document.getElementById('pruebaExpress').innerHTML = productsHTML;
 }
 
+function displayVariedades(variedadesList) {
+    let variedadesHTML = '';
+    variedadesList.forEach(e => {
+        variedadesHTML +=
+        `<div class="content-modal">
+        <h2 id="content-titulo" class="content-modal-title">Variedad: ${e.tipo}</h2>
+        <p id="content-text" class="content-modal-text">Peso de cajon: ${e.peso}KG</p>
+        <div class="btn-cerrar">
+          <label onclick="cerrarModal()" for="btn-modal">Cerrar</label>
+        </div>
+      </div>
+      <label onclick="cerrarModal()" for="btn-modal" class="cerrar-modal"></label>`
+    });
+    document.getElementById('modal').innerHTML = variedadesHTML;
+}
+
 window.onload = async() =>{
     console.log('Pagina cargada');
     const productList = await(await fetch('/api/products')).json();
     console.log(productList);
     displayProducts(productList);
+
+    const variedadesList = await(await fetch('/api/variedades')).json();
+    console.log(variedadesList);
+    displayVariedades(variedadesList);
 };
