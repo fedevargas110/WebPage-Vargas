@@ -17,23 +17,18 @@ function scrollNav() {
     });
 }
 
-function mostrarModal(nombre){
-    console.log('Hola MATEO');
-    document.getElementById('modal').style.setProperty('visibility', 'visible');
-}
-
-function cerrarModal(){
+function cerrarModal() {
     console.log('Hola Fede');
-    document.getElementById('modal').style.setProperty('visibility','hidden');
+    document.getElementById('modal').style.setProperty('visibility', 'hidden');
 }
 
 function displayProducts(productList) {
     let productsHTML = '';
     productList.forEach(e => {
         productsHTML +=
-        `<div class="producto">
+            `<div class="producto">
             <a class="producto__enlace">
-            <img onclick="mostrarModal()" class="producto__imagen" src="${e.img_producto}" alt="imagen producto">
+            <img onclick="displayVariedades(${e.id})" class="producto__imagen" src="${e.img_producto}" alt="imagen producto">
             <div class="producto__informacion">
             <p class="producto__nombre">${e.nombre}</p>
             <!--<p class="producto__precio">$200</p>-->
@@ -44,29 +39,57 @@ function displayProducts(productList) {
     document.getElementById('pruebaExpress').innerHTML = productsHTML;
 }
 
-function displayVariedades(variedadesList) {
-    let variedadesHTML = '';
-    variedadesList.forEach(e => {
-        variedadesHTML +=
-        `<div class="content-modal">
-        <h2 id="content-titulo" class="content-modal-title">Variedad: ${e.tipo}</h2>
-        <p id="content-text" class="content-modal-text">Peso de cajon: ${e.peso}KG</p>
-        <div class="btn-cerrar">
-          <label onclick="cerrarModal()" for="btn-modal">Cerrar</label>
+async function displayVariedades(id) {
+    const aux = await fetch(`/api/variedades?id=${id}`)
+    const variedadesList = await aux.json();
+    let inicioModal = `<div class="content-modal">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+<div class="carousel-indicators">`
+let flag = false;
+
+variedadesList.forEach((e,i)=>{
+    inicioModal += `<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="${i}" ${!flag && 'class="active" aria-current="true"'} aria-label="Slide ${i}"></button>`
+    if (!flag) flag = true;
+});
+
+inicioModal+=`</div>
+<div class="carousel-inner">`;
+
+flag = false;
+variedadesList.forEach(e => {
+    inicioModal += `<div class="carousel-item ${!flag && "active"}" >
+        <img src="${e.image}" class="d-block w-100" alt="imagen del producto">
+        <div class="carousel-caption d-none d-md-block">
+        <h5>${e.tipo}</h5>
+        <p>Peso del cajon: ${e.peso}KG</p>
         </div>
-      </div>
-      <label onclick="cerrarModal()" for="btn-modal" class="cerrar-modal"></label>`
-    });
-    document.getElementById('modal').innerHTML = variedadesHTML;
+        </div>`
+    if (!flag) flag = true;
+});
+console.log(variedadesList);
+
+inicioModal += `
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Next</span>
+</button>
+</div>
+<label onclick="cerrarModal()" for="btn-modal" class="cerrar-modal"></label>
+  </div>`;
+   
+    document.getElementById('modal').innerHTML = inicioModal;
+    document.getElementById('modal').style.setProperty('visibility', 'visible');
 }
 
-window.onload = async() =>{
+window.onload = async () => {
     console.log('Pagina cargada');
-    const productList = await(await fetch('/api/products')).json();
+    const productList = await (await fetch('/api/products')).json();
     console.log(productList);
     displayProducts(productList);
 
-    const variedadesList = await(await fetch('/api/variedades')).json();
-    console.log(variedadesList);
-    displayVariedades(variedadesList);
 };

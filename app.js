@@ -17,7 +17,8 @@ app.get('/api/products', async(req, res) => {
 })
 
 app.get('/api/variedades', async(req, res)=>{
-  const [row, fields] = await connection.execute('SELECT * FROM variedades')
+  let id = req.query.id
+  const [row, fields] = await connection.execute(`SELECT * FROM variedades INNER JOIN productos ON variedades.id_productos = productos.id WHERE productos.id = ${id}`)
   console.log(row);
   res.send(row);
 })
