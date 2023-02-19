@@ -1,3 +1,5 @@
+const BASEURL = 'https://backend-vargas-production.up.railway.app';
+
 document.addEventListener('DOMContentLoaded', function () {
     iniciarApp();
 });
@@ -40,7 +42,7 @@ function displayProducts(productList) {
 }
 
 async function displayVariedades(id) {
-    const aux = await fetch(`/api/variedades?id=${id}`)
+    const aux = await fetch(BASEURL+`/api/variedades?id=${id}`)
     const variedadesList = await aux.json();
     let inicioModal = `<div class="content-modal">
     <div id="carouselExampleDark" class="carousel carousel-dark slide">
@@ -88,7 +90,7 @@ inicioModal += `
 
 window.onload = async () => {
     console.log('Pagina cargada');
-    const productList = await (await fetch('/api/products')).json();
+    const productList = await (await fetch(BASEURL+'/api/products')).json();
     console.log(productList);
     displayProducts(productList);
 
