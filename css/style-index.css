@@ -48,6 +48,13 @@ body {
     font-size: 20px;
 }
 
+.item-ref:hover{
+    background-color: var(--color-principal);
+    border-radius: 5px;
+    color: var(--color-secundario);
+    transition: .40s;
+}
+
 .item {
     padding: .4rem 0;
 }

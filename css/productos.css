@@ -55,6 +55,13 @@ body {
     font-size: 20px;
 }
 
+.navegacion__item:hover{
+    background-color: var(--color-principal);
+    border-radius: 5px;
+    color: var(--blanco);
+    transition: .40s;
+}
+
 /*-------------BODY--------------*/
 
 .container-titulo {
