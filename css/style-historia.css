@@ -90,7 +90,12 @@ body {
 .text-h {
     font-family: var(--font-secundaria);
     font-size: 20px;
+    font-weight: 700;
     text-align: center;
+    letter-spacing: normal;
+    line-height: 35px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /*-------FOOTER------Mobile*/
