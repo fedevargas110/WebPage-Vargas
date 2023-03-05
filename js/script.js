@@ -62,8 +62,8 @@ variedadesList.forEach(e => {
     inicioModal += `<div class="carousel-item ${!flag && "active"}" >
         <img src="${e.image}" class="d-block w-100" alt="imagen del producto">
         <div class="carousel-caption d-none d-md-block">
-        <h5>${e.tipo}</h5>
-        <p>Peso del cajon: ${e.peso}KG</p>
+        <h1 class="pepe">${e.tipo}</h1>
+        <p class="pepe2">Peso del cajon: ${e.peso}KG</p>
         </div>
         </div>`
     if (!flag) flag = true;

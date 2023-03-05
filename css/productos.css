@@ -102,6 +102,19 @@ body {
     display: none;
 }
 
+.pepe{
+    color: var(--negro);
+    font-family: var(--font-secundaria);
+    font-weight: 700;
+    font-size: 25px;    
+}
+
+.pepe2{
+    font-family: var(--font-secundaria);
+    font-weight: 700;
+    font-size: 15px;
+}
+
 .container-modal{
     width: 100%;
     height: 100%;
