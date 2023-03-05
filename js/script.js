@@ -63,7 +63,7 @@ variedadesList.forEach(e => {
         <img src="${e.image}" class="d-block w-100" alt="imagen del producto">
         <div class="carousel-caption d-none d-md-block">
         <h1 class="pepe">${e.tipo}</h1>
-        <p class="pepe2">Peso del cajon: ${e.peso}KG</p>
+        <p class="pepe2">Peso: ${e.peso}KG</p>
         </div>
         </div>`
     if (!flag) flag = true;

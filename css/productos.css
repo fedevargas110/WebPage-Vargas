@@ -103,7 +103,8 @@ body {
 }
 
 .pepe{
-    color: var(--negro);
+    color: var(--blanco);
+    text-decoration-line:overline;
     font-family: var(--font-secundaria);
     font-weight: 700;
     font-size: 25px;    
@@ -113,6 +114,7 @@ body {
     font-family: var(--font-secundaria);
     font-weight: 700;
     font-size: 15px;
+    color:#ffffff;
 }
 
 .container-modal{
