@@ -1,3 +1,10 @@
+function alerta(){
+    alert('Para visualizar las variedades de cada producto clickear el simbolo + ' + 
+            'Para agregar al carrito clickear el simbolo de carrito');
+}
+
+alerta();
+
 const BASEURL = 'https://backend-vargas-production.up.railway.app';
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -28,14 +35,20 @@ function displayProducts(productList) {
     let productsHTML = '';
     productList.forEach(e => {
         productsHTML +=
-            `<div class="producto">
-            <a class="producto__enlace">
-            <img onclick="displayVariedades(${e.id})" class="producto__imagen" src="${e.img_producto}" alt="imagen producto">
+        `<div class="producto">
+            <div class="producto__vista">
+                <a class="producto__enlace">
+                    <i onclick="displayVariedades(${e.id})" class="bi bi-plus-circle"></i>
+                </a>
+                <a class="producto__carrito">
+                    <i class="bi bi-cart"></i>
+                </a>
+                <img class="producto__imagen"src="${e.img_producto}" alt="imagen producto">
+            </div>
             <div class="producto__informacion">
             <p class="producto__nombre">${e.nombre}</p>
             <!--<p class="producto__precio">$200</p>-->
           </div>
-        </a>
       </div>`
     });
     document.getElementById('pruebaExpress').innerHTML = productsHTML;
