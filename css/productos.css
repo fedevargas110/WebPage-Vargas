@@ -181,10 +181,6 @@ body {
     background-color: #185e83;
 }
 
-/*#btn-modal:checked ~ .container-modal{
-    visibility: hidden;
-}*/
-
 .producto__vista{
     position: relative;
 }
