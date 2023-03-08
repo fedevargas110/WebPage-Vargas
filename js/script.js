@@ -33,9 +33,6 @@ function displayProducts(productList) {
                 <a class="producto__enlace">
                     <i onclick="displayVariedades(${e.id})" class="bi bi-plus-circle"></i>
                 </a>
-                <a class="producto__carrito">
-                    <i class="bi bi-cart"></i>
-                </a>
                 <img class="producto__imagen"src="${e.img_producto}" alt="imagen producto">
             </div>
             <div class="producto__informacion">
@@ -66,7 +63,12 @@ inicioModal+=`</div>
 flag = false;
 variedadesList.forEach(e => {
     inicioModal += `<div class="carousel-item ${!flag && "active"}" >
-        <img src="${e.image}" class="d-block w-100" alt="imagen del producto">
+        <div class="producto__vista">
+            <a class="producto__carrito">
+                <p class="text__carrito">Agregar al carrito  <i class="bi bi-bag-fill"></i></p>
+            </a>
+            <img src="${e.image}" class="d-block w-100" alt="imagen del producto">
+        </div>
         <div class="carousel-caption d-none d-md-block">
         <h1 class="pepe">${e.tipo}</h1>
         <p class="pepe2">Peso: ${e.peso}KG</p>
