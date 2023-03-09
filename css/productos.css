@@ -86,6 +86,35 @@ body {
     transition: .40s;
 }
 
+.li_lista{
+    display: none;
+}
+
+.icono:hover .lista{
+    margin-top: 20px;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    background-color: var(--blanco);
+    z-index: 999999999999;
+}
+
+.li_lista li{
+   list-style: none;
+   padding: 1rem; 
+   font-weight: bold;
+}
+
+.icono:hover .li_lista{
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 10px;
+    border-bottom: solid thin #e1e1e1;
+    color: #000;
+}
+
 /*-------------BODY--------------*/
 
 .container-titulo {
