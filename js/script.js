@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
     iniciarApp();
 });
 
+let carrito = [];
+
 function iniciarApp() {
     scrollNav();
 }
@@ -64,7 +66,7 @@ flag = false;
 variedadesList.forEach(e => {
     inicioModal += `<div class="carousel-item ${!flag && "active"}" >
         <div class="producto__vista">
-            <a class="producto__carrito">
+            <a class="producto__carrito" onclick="agregarAlcarrito(${e.id_variedades})">
                 <p class="text__carrito">Agregar al carrito  <i class="bi bi-bag-fill"></i></p>
             </a>
             <img src="${e.image}" class="d-block w-100" alt="imagen del producto">
@@ -94,6 +96,12 @@ inicioModal += `
    
     document.getElementById('modal').innerHTML = inicioModal;
     document.getElementById('modal').style.setProperty('visibility', 'visible');
+}
+
+function agregarAlcarrito(id){
+    const item = variedadesList.find((prod) => prod.id_variedades === id)
+    carrito.push(item) 
+    console.log(item)
 }
 
 window.onload = async () => {
