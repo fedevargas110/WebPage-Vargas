@@ -1,4 +1,4 @@
-const BASEURL = 'https://backend-vargas-production.up.railway.app';
+const BASEURL = 'https://cors-anyware-production.up.railway.app/https://backend-vargas-production.up.railway.app';
 
 document.addEventListener('DOMContentLoaded', function () {
     iniciarApp();
