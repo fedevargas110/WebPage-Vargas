@@ -46,9 +46,11 @@ function displayProducts(productList) {
     document.getElementById('pruebaExpress').innerHTML = productsHTML;
 }
 
+let variedadesList;
+
 async function displayVariedades(id) {
     const aux = await fetch(BASEURL+`/api/variedades?id=${id}`)
-    const variedadesList = await aux.json();
+    variedadesList = await aux.json();
     let inicioModal = `<div class="content-modal">
     <div id="carouselExampleDark" class="carousel carousel-dark slide">
 <div class="carousel-indicators">`
@@ -97,6 +99,8 @@ inicioModal += `
     document.getElementById('modal').innerHTML = inicioModal;
     document.getElementById('modal').style.setProperty('visibility', 'visible');
 }
+
+
 
 function agregarAlcarrito(id){
     const item = variedadesList.find((prod) => prod.id_variedades === id)
