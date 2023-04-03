@@ -1,4 +1,4 @@
-const BASEURL = 'https://cors-anyware-production.up.railway.app/https://backend-vargas-production.up.railway.app';
+const BASEURL = 'https://backend-vargas-production.up.railway.app';
 
 document.addEventListener('DOMContentLoaded', function () {
     iniciarApp();
@@ -33,9 +33,8 @@ function displayProducts(productList) {
         `<div class="producto">
             <div class="producto__vista">
                 <a class="producto__enlace">
-                    <i onclick="displayVariedades(${e.id})" class="bi bi-plus-circle"></i>
+                    <img onclick="displayVariedades(${e.id})" class="producto__imagen"src="${e.img_producto}" alt="imagen producto">
                 </a>
-                <img class="producto__imagen"src="${e.img_producto}" alt="imagen producto">
             </div>
             <div class="producto__informacion">
             <p class="producto__nombre">${e.nombre}</p>

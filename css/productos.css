@@ -233,29 +233,11 @@ body {
 .btn-cerrar label:hover{
     background-color: #185e83;
 }
-
-.producto__vista{
-    position: relative;
-}
-
 .producto__enlace{
     cursor: pointer;
     font-size: 20px;
-    color: var(--blanco);
-    padding: 5px 10px;
-    position: absolute;
-    right: 0;
-    background-color: #17FAC3;
-    border: 1px solid;
-    border-radius: 10px;
 }  
 
-.producto__enlace:hover{
-    color: var(--color-principal);
-    transition: .2s;
-    border-color: #ffffff;
-
-}
 
 .text__carrito{
     text-transform: uppercase;
