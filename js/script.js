@@ -100,11 +100,25 @@ inicioModal += `
 }
 
 
-
+let item;
 function agregarAlcarrito(id){
-    const item = variedadesList.find((prod) => prod.id_variedades === id)
+    item = variedadesList.find((prod) => prod.id_variedades === id)
     carrito.push(item) 
-    console.log(item)
+    mostrarCarrito();
+}
+
+const mostrarCarrito = () => {
+    const contenedor_carrito = document.querySelector('.carrito .contenedor_carrito');
+    contenedor_carrito.innerHTML = ''
+    carrito.forEach((prod) => {
+        const {id_variedades, tipo, peso} = prod
+        contenedor_carrito.innerHTML += `
+        <div class="contenedor_body">
+            <p>${tipo}</p>
+            <p>${peso}</p>
+        </div>
+        `
+    })
 }
 
 window.onload = async () => {

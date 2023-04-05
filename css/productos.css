@@ -115,6 +115,25 @@ body {
     color: #000;
 }
 
+.contenedor_carrito {
+    display: none;
+}
+
+.icono:hover .contenedor_carrito {
+    display: block;
+    font-size: 2rem;
+    font-family: var(--font-primaria);
+    color: #000;
+}
+
+.contenedor_body {
+    max-width: 90%;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 /*-------------BODY--------------*/
 
 .container-titulo {
